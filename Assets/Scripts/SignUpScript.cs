@@ -3,21 +3,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginScript : MonoBehaviour
+public class SignUpScript : MonoBehaviour
 {
-    public  TMP_InputField emailInput;
+    public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
-    public Button loginButton;
+    public TMP_InputField firstNameInput;
+    public TMP_InputField lastNameInput;
+    public Button signUpButton;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        loginButton.onClick.AddListener(OnLoginButtonClicked);
-        
+        signUpButton.onClick.AddListener(OnSignupButtonClicked);
     }
 
-    void OnLoginButtonClicked()
+    void OnSignupButtonClicked()
     {
         string email = emailInput.text;
         string password = passwordInput.text;
@@ -44,5 +44,6 @@ public class LoginScript : MonoBehaviour
             messageText.text = "Please enter a valid email and password.";
             */
         }
-    }  
+    }
+
 }
